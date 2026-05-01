@@ -8,8 +8,8 @@ Built using **React (Vite)**, **Tailwind CSS**, and **Supabase**.
 
 ## 🌐 Live Demo
 
-* 🔗 Vercel: https://your-vercel-link
-* 🔗 Railway: https://your-railway-link
+* 🔗 Vercel: https://team-task-manager-n84s.vercel.app
+* 🔗 Railway: team-task-manager-production-2b91.up.railway.app
 
 ---
 
