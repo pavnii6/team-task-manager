@@ -9,7 +9,7 @@ Built using **React (Vite)**, **Tailwind CSS**, and **Supabase**.
 ## 🌐 Live Demo
 
 * 🔗 Vercel: https://team-task-manager-n84s.vercel.app
-* 🔗 Railway: team-task-manager-production-2b91.up.railway.app
+* 🔗 Railway: http://team-task-manager-production-2b91.up.railway.app
 
 ---
 
