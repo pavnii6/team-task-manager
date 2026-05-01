@@ -1,108 +1,156 @@
-# Team Task Manager
+# 🚀 Team Task Manager
 
-A full-featured team task management web app built with **React (Vite)** + **Tailwind CSS** + **Supabase**.
+A full-stack **Team Task Management Web Application** that allows users to create projects, assign tasks, and track progress with **role-based access control**.
 
----
-
-## Features
-
-- **Auth** — Email/password signup & login via Supabase Auth
-- **Roles** — Admin (first user / configured email) can create projects & tasks; members can update task status
-- **Projects** — Create and browse projects
-- **Tasks** — Create tasks with title, description, status, due date, and assignee
-- **Dashboard** — Stats: total tasks, by status, overdue count with visual progress bars
-- **Overdue detection** — Tasks past their due date are highlighted in red
+Built using **React (Vite)**, **Tailwind CSS**, and **Supabase**.
 
 ---
 
-## Quick Start
+## 🌐 Live Demo
 
-### 1. Set up Supabase
+* 🔗 Vercel: https://your-vercel-link
+* 🔗 Railway: https://your-railway-link
 
-1. Go to [supabase.com](https://supabase.com) and create a new project.
-2. Open the **SQL Editor** and run the contents of `supabase-setup.sql`.
-3. Copy your **Project URL** and **anon public key** from **Settings → API**.
+---
 
-### 2. Configure environment variables
+## ✨ Features
 
-Edit `.env` in the project root:
+* 🔐 Authentication (Signup/Login using Supabase)
+* 👤 Role-based access (Admin & Member)
+* 📁 Project creation and management
+* ✅ Task creation and assignment
+* 🔄 Task status tracking (To Do, In Progress, Done)
+* 📊 Dashboard with task statistics
+* ⏰ Overdue task highlighting
+* 🎯 Clean and responsive UI
+
+---
+
+## 🛠 Tech Stack
+
+* **Frontend:** React (Vite)
+* **Styling:** Tailwind CSS
+* **Backend:** Supabase (Authentication + Database)
+* **Routing:** React Router
+* **Deployment:** Vercel & Railway
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/pavnii6/team-task-manager.git
+cd team-task-manager
+```
+
+---
+
+### 2️⃣ Create `.env` file
 
 ```env
 VITE_SUPABASE_URL=https://your-project-id.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key-here
-
-# Optional: set a specific admin email
-# If omitted, the first user who signs up and sets role=admin in metadata is admin
-VITE_ADMIN_EMAIL=admin@yourcompany.com
+VITE_SUPABASE_ANON_KEY=your-anon-key
+VITE_ADMIN_EMAIL=your-email@gmail.com
 ```
 
-### 3. Install dependencies & run
+---
+
+### 3️⃣ Install dependencies & run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+👉 Open: http://localhost:5173
 
 ---
 
-## Admin Setup
+## 👑 Admin Configuration
 
-The app determines admin status in two ways:
+### Option A (Recommended)
 
-**Option A (recommended):** Set `VITE_ADMIN_EMAIL` in `.env` to the email address that should be admin.
+Set admin email in `.env`:
 
-**Option B:** After signing up, go to **Supabase Dashboard → Authentication → Users**, click your user, and add this to **Raw User Meta Data**:
+```env
+VITE_ADMIN_EMAIL=your-email@gmail.com
+```
+
+---
+
+### Option B (Supabase Metadata)
+
+Go to **Supabase → Authentication → Users**
+Add:
+
 ```json
 { "role": "admin" }
 ```
 
 ---
 
-## Folder Structure
+## 📂 Project Structure
 
 ```
 src/
 ├── pages/
-│   ├── AuthPage.jsx        # Login / Signup
-│   ├── DashboardPage.jsx   # Stats + project list
-│   └── ProjectPage.jsx     # Tasks inside a project
+│   ├── AuthPage.jsx
+│   ├── DashboardPage.jsx
+│   └── ProjectPage.jsx
 ├── components/
-│   ├── Navbar.jsx          # Top navigation bar
-│   └── TaskCard.jsx        # Individual task card with status controls
-├── supabaseClient.js       # Supabase client initialization
-├── App.jsx                 # Router + auth session management
-├── main.jsx                # React entry point
-└── index.css               # Tailwind CSS import
+│   ├── Navbar.jsx
+│   └── TaskCard.jsx
+├── supabaseClient.js
+├── App.jsx
+├── main.jsx
+└── index.css
 ```
 
 ---
 
-## Build for Production
+## 🚀 Deployment
 
-```bash
-npm run build
-npm run preview
-```
+### Vercel
 
-The `dist/` folder is ready to deploy to **Vercel**, **Netlify**, or any static host.
+* Import GitHub repo
+* Add environment variables
+* Deploy
 
-### Deploy to Vercel
+### Railway
 
-```bash
-npx vercel --prod
-```
-
-Set the environment variables (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_ADMIN_EMAIL`) in the Vercel project settings.
+* Set root directory
+* Add environment variables
+* Configure build & start commands
 
 ---
 
-## Tech Stack
+## 🎥 Demo Video
 
-| Layer     | Technology              |
-|-----------|-------------------------|
-| Frontend  | React 19 + Vite 8       |
-| Styling   | Tailwind CSS v4         |
-| Backend   | Supabase (Auth + DB)    |
-| Routing   | React Router v7         |
+👉 https://your-demo-video-link
+
+---
+
+## 💡 Key Highlights
+
+* Role-based access control (Admin & Member)
+* Row-Level Security (RLS) implemented in Supabase
+* Secure authentication system
+* Fully responsive UI
+* Deployed on multiple platforms
+
+---
+
+## 🔮 Future Improvements
+
+* Task priority (Low / Medium / High)
+* Team collaboration (multi-user projects)
+* Notifications & reminders
+* Real-time updates
+
+---
+
+## 👩‍💻 Author
+
+**Pavni Srivastava**
